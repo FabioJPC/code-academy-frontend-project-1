@@ -1,11 +1,161 @@
+/* MISCELLANEOUS */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1a1a1a;
+
+  --neon-green: #00FF41;
+  --neon-green-dim: #00CC33;
+  --neon-green-glow: rgba(0, 255, 65, 0.15);
+
+  --text-primary: #e8e8e8;
+  --text-secondary: #888888;
+
+  --border: #222222;
+  --border-accent: #00FF41;
+}
+
 .black-ops-one-regular {
   font-family: "Black Ops One", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-.inter-font {
+
+/* HEADER */
+
+.logo-container {
+  color: var(--text-primary);
+  margin-left: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.logo-container p {
+  font-size: xx-large;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  min-height: 10vh;
+  flex-shrink: 0;
+}
+
+/* BODY */
+
+body {
+  color: var(--text-primary);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  background-color: var(--bg-tertiary);
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ASIDE & NAV */
+
+aside {
+  background-color: var(--bg-tertiary);
+  min-width: 10%;
+  flex-shrink: 0;
+  padding: 20px;
+}
+
+.categories-nav {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;  
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* CARD */
+
+.card-container {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-content: start;
+  justify-content: space-around;
+  display: grid;
+  gap: 20px;
+  padding: 50px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  background-color: black;
+  margin: 10px;
+
+  border-radius: 15px;
+}
+.card-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background: blueviolet;
+  border-radius: 4px;
+}
+
+.game-card {
+  padding: 10px;
+  border: 4px solid var(--neon-green-glow);
+  border-radius: 15px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-card button {
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+
+.game-cover-wrapper {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.game-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }

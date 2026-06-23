@@ -13,19 +13,28 @@
 </head>
 
 <body>
-    <header></header>
-
+    <header>
+        <div class="logo-container">
+            <img src="images/logo/logo-no-bg.png" alt="Logo do site" class="logo">
+            <p class="black-ops-one-regular">IndieCore</p>
+        </div>
+    </header>
+    
+    <main class="main-content">
         <aside aria-label="Filtros e categorias">
-
+            <nav class="categories-nav">
+                <p>Categorias</p>
+                <ul id="genre-filter-list" class="filter-list">
+                    <!--dynamic insertion-->
+                </ul>
+            </nav>
         </aside>
 
-        <section aria-label="Lista de jogos">
+        <section id="card-container" class="card-container" aria-label="Lista de jogos">
 
         </section>
     </main>
 
-    <footer></footer>
-    
     <script src="script.js"></script>
 </body>
 </html>
