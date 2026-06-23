@@ -57,7 +57,7 @@ function renderFilterButtons() {
     const genres = ["Todos", ...availableGenres];
 
     genreFilter.innerHTML = genres.map((genre) => {
-        const isActive = genre === currentFilter ? "active" : "";
+        const isActive = genre === currentFilter ? "filter-active" : "";
 
         return /*html*/`
             <li>
@@ -82,5 +82,27 @@ function filterGames(selectedGenre) {
         renderGames(filteredList);
     }
 }
+
+function searchGame(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    const query = form.query.value.toLowerCase().trim();
+
+    currentFilter = "Todos";
+    renderFilterButtons();
+
+    if(query === "") {
+        
+        renderGames(gameList);
+        return;
+    }
+    const gamesFound = gameList.filter((game) => {
+        return game.name.toLowerCase().includes(query);
+    });
+
+    renderGames(gamesFound);
+
+} 
 
 loadData();

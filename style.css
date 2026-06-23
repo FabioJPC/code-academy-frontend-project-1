@@ -43,10 +43,47 @@
 
 header {
   align-items: center;
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
   min-height: 10vh;
   flex-shrink: 0;
+}
+
+.search-container {
+  min-width: 25%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--bg-tertiary);
+}
+
+.search-container form {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 8px;
+}
+
+.search-container input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+  outline: none;
+  padding: 8px 10px;
+}
+
+.search-container button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  margin-right: 50px;
 }
 
 /* BODY */
@@ -87,7 +124,7 @@ aside {
 .categories-nav {
   font-weight: bold;
   margin-bottom: 15px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-align: center;
 }
 
@@ -97,8 +134,39 @@ aside {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
+}
+
+.filter-button {
+  color: var(--text-secondary);
+  background-color: transparent;
+  border: none;
+  min-width: 100%;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.filter-button li {
+  width: 100%;
+}
+
+.filter-button:hover {
+  color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+.filter-active {
+  color: var(--text-primary);
+  border-bottom: none;
+  background-image: radial-gradient(ellipse at center, var(--border-accent) 0%, transparent 80%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 5px;
 }
 
 /* CARD */
