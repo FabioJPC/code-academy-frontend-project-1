@@ -27,24 +27,44 @@
         </div>
 
         <div class="profile">
-            <img src="" alt="">
-            <p>Nome</p>
+            <button class="avatar">
+                <i class="bi bi-person-circle avatar"></i>
+                <span>Nome</span>
+            </button>
         </div>
     </header>
     
     <main class="main-content">
         <aside aria-label="Filtros e categorias">
             <nav class="categories-nav">
-                <p>Categorias</p>
-                <ul id="genre-filter-list" class="filter-list">
-                    <!--dynamic insertion-->
-                </ul>
+                <div>
+                    <p>Categorias</p>
+                    <ul id="genre-filter-list" class="filter-list">
+                        <!--dynamic insertion-->
+                    </ul>
+                </div>
+
+                <div>
+                    <p>Status</p>
+                    <ul id="status-filter-list" class="filter-list">
+                        <!--dynamic insertion-->
+                    </ul>
+                </div>
             </nav>
         </aside>
 
         <section id="card-container" class="card-container" aria-label="Lista de jogos">
-
+            <!--dynamic insertion-->
         </section>
+
+        <div class="details-modal hidden" id="details-modal">
+            <div class="modal-content">
+                <button id="close-button" onclick="closeModal()">&times;</button>
+                <div id="modal-content">
+                    <!--dynamic insertion-->
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>

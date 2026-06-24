@@ -84,6 +84,24 @@ header {
 
 .profile {
   margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.avatar {
+  font-size: 30px;
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.avatar i {
+  font-size: 30px;
 }
 
 /* BODY */
@@ -122,6 +140,9 @@ aside {
 }
 
 .categories-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   font-weight: bold;
   margin-bottom: 15px;
   color: var(--text-primary);
@@ -183,7 +204,6 @@ aside {
   overflow-y: auto;
   background-color: black;
   margin: 10px;
-
   border-radius: 15px;
 }
 .card-container::-webkit-scrollbar {
@@ -207,6 +227,14 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s;
+}
+
+.game-card:hover, 
+.game-card:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--border-accent);
+  outline: none;
 }
 
 .game-card button {
@@ -226,4 +254,40 @@ aside {
   width: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Details modal*/
+
+.details-modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-content {
+  max-width: 600px;
+  width: 90%;
+  background-color: var(--bg-tertiary);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#close-button {
+  all: unset;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }

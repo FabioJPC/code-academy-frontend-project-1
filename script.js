@@ -1,8 +1,11 @@
 const cardContainer = document.getElementById("card-container");
 const genreFilter = document.getElementById("genre-filter-list");
+const statusFilterList = document.getElementById("status-filter-list");
 
 let availableGenres = new Set();
+let availableStatusProgress = new Set();
 let currentFilter = "Todos";
+let currentStatusFilter = "Todos";
 
 let gameList = [];
 
@@ -14,6 +17,7 @@ async function loadData() {
 
         initializeMetaData();
         renderFilterButtons();
+        renderStatusOptions();
         renderGames(gameList);
     }
     catch(error) {
@@ -23,17 +27,43 @@ async function loadData() {
 }
 
 function createGameCard(game) {
+    const gameData = encodeURIComponent(JSON.stringify(game));
     return /*html*/`
-        <article class="game-card">
+        <article class="game-card" onclick="openModal('${gameData}')" tabIndex="0" role="button">
             <div class="game-cover-wrapper">
                 <img src="images/covers/${game.filename}.jpg" alt="Capa do jogo" class="game-cover">
             </div>
             <h3>${game.name}</h3>
             <p class="genre">${game.genre}</p>
             <span class="price">${game.price}</span>
-            <button class="primary-button">Ver</button>
         </article>
     `;
+}
+
+function openModal(gameData) {
+    const game = JSON.parse(decodeURIComponent(gameData));
+    const modal = document.getElementById("details-modal");
+    const modalBody = document.getElementById("modal-content")
+
+    modalBody.innerHTML = /*html*/`
+        <div class="modal-header">
+            <img src="images/covers/${game.filename}.jpg" alt="${game.name}">
+            <div>
+                <h2>${game.name}</h2>
+                <p><strong>Gênero:</strong> ${game.genre} | <strong>Status:</strong> ${game.status}</p>
+            </div>
+        </div>
+        <div class="modal-description">
+            <h3>Sobre o Jogo</h3>
+            <p>${game.description || "Este jogo é uma experiência indie incrível ainda sem descrição detalhada."}</p>
+        </div>
+    `
+    modal.classList.remove("hidden"); 
+}
+
+function closeModal() {
+    const modal = document.getElementById("details-modal");
+    modal.classList.add("hidden");
 }
 
 function renderGames(games) {
@@ -50,6 +80,7 @@ function renderGames(games) {
 function initializeMetaData() {
     gameList.forEach((game) => {
         availableGenres.add(game.genre);
+        availableStatusProgress.add(game.status);
     })
 }
 
@@ -61,7 +92,7 @@ function renderFilterButtons() {
 
         return /*html*/`
             <li>
-                <button class="filter-button ${isActive}" onclick="filterGames('${genre}')">
+                <button class="filter-button ${isActive}" onclick="filterGames('${genre}', '${currentStatusFilter}')">
                     ${genre}
                 </button>
             </li>
@@ -69,18 +100,37 @@ function renderFilterButtons() {
     }).join("");
 }
 
-function filterGames(selectedGenre) {
+function filterGames(selectedGenre, status = "Todos") {
     currentFilter = selectedGenre;
+    currentStatusFilter = status;
 
     renderFilterButtons();
+    renderStatusOptions();
 
-    if(selectedGenre === "Todos") {
-        renderGames(gameList);
-    }
-    else {
-        filteredList = gameList.filter(game => game.genre === selectedGenre);
-        renderGames(filteredList);
-    }
+    const filteredList = gameList.filter((game) => {
+        const matchGenre = selectedGenre === "Todos" || game.genre === selectedGenre;
+        const matchStatus = status === "Todos" || game.status === status;
+
+        return matchGenre && matchStatus;
+    })
+
+    renderGames(filteredList);
+}
+
+function renderStatusOptions() {
+    const availableStatus = ["Todos", ...availableStatusProgress];
+
+    statusFilterList.innerHTML = availableStatus.map((status) => {
+        const isActive = status === currentStatusFilter ? "filter-active" : "";
+
+        return /*html*/`
+            <li>
+                <button class="filter-button ${isActive}" onclick="filterGames('${currentFilter}' , '${status}')">
+                    ${status}
+                </button>
+            </li>
+        `
+    }).join("");
 }
 
 function searchGame(event) {
