@@ -33,5 +33,41 @@
         "genre": "Metroidvania", 
         "price": "R$ 27,99",
         "status": "Beta"
+    },
+    
+    { 
+        "id": 1,
+        "filename": "witcher-3", 
+        "name": "The Witcher 3", 
+        "genre": "RPG", 
+        "price": "R$ 129,90",
+        "status": "Acesso antecipado"
+    },
+
+    { 
+        "id": 2,
+        "filename": "elden-ring", 
+        "name": "Elden Ring", 
+        "genre": "Soulslike", 
+        "price": "R$ 229,00",
+        "status": "Lançado"
+    },
+
+    { 
+        "id": 3,
+        "filename": "cyberpunk-2077", 
+        "name": "Cyberpunk 2077", 
+        "genre": "Ficção Científica", 
+        "price": "R$ 199,00",
+        "status": "Protótipo"
+    },
+
+    { 
+        "id": 4,
+        "filename": "hollow-knight", 
+        "name": "Hollow Knight", 
+        "genre": "Metroidvania", 
+        "price": "R$ 27,99",
+        "status": "Beta"
     }
 ]

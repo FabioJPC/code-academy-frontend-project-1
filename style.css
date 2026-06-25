@@ -15,6 +15,10 @@
   --border-accent: #00FF41;
 }
 
+html {
+  color: var(--text-primary);
+}
+
 .black-ops-one-regular {
   font-family: "Black Ops One", system-ui;
   font-weight: 400;
@@ -56,7 +60,7 @@ header {
   display: flex;
   align-items: center;
   border-radius: 8px;
-  background-color: var(--bg-tertiary);
+  background-color: #FFF;
 }
 
 .search-container form {
@@ -70,7 +74,7 @@ header {
   flex: 1;
   background-color: transparent;
   border: none;
-  color: #FFF;
+  color: var(--text-secondary);
   outline: none;
   padding: 8px 10px;
 }
@@ -80,6 +84,7 @@ header {
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: var(--bg-secondary);
 }
 
 .profile {
@@ -193,11 +198,12 @@ aside {
 /* CARD */
 
 .card-container {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 450px;
   align-content: start;
   justify-content: space-around;
   display: grid;
-  gap: 20px;
+  gap: 25px;
   padding: 50px;
   flex: 1;
   min-height: 0;
@@ -215,7 +221,7 @@ aside {
 }
 
 .card-container::-webkit-scrollbar-thumb {
-  background: blueviolet;
+  background: var(--neon-green-dim);
   border-radius: 4px;
 }
 
@@ -223,11 +229,13 @@ aside {
   padding: 10px;
   border: 4px solid var(--neon-green-glow);
   border-radius: 15px;
-  height: 450px;
+  height: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s;
+  box-sizing: border-box;
 }
 
 .game-card:hover, 
@@ -244,7 +252,8 @@ aside {
 
 .game-cover-wrapper {
   width: 100%;
-  height: 60%;
+  aspect-ratio: 3/4;
+  /*height: 60%;*/
   border-radius: 10px;
   overflow: hidden;
 }
@@ -276,18 +285,100 @@ aside {
 }
 
 .modal-content {
-  max-width: 600px;
-  width: 90%;
+  box-sizing: border-box;
+  position: relative;
+  width: 60%;
+  height: 80%;
   background-color: var(--bg-tertiary);
   padding: 10px;
   border-radius: 8px;
 }
 
+.modal-body {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-header {
+  margin: 10px 12px;
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-info {
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-info h2 {
+  margin: 8px 0; 
+}
+
+.header-info p {
+  margin: 8px 0;
+}
+
+.modal-description p {
+  font-size: 0.9em;
+}
+
+.modal-cover-wrapper {
+  position: relative;
+  text-align: center;
+  min-height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 90%;
+  padding: 8px;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+.modal-cover-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+
+  filter: blur(3px) brightness(0.6);
+  transform: scale(1.1);
+}
+
+.modal-cover {
+  z-index: 2;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  position: relative;
+  box-shadow: 0 4px 15px var(--border);
+  border-radius: 8px;
+}
+
+.link-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
 #close-button {
+  z-index: 1010;
   all: unset;
   cursor: pointer;
   font-size: 24px;
   position: absolute;
-  right: 10px;
-  top: 5px;
+  right: 2px;
+  top: 2px;
 }

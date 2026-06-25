@@ -43,20 +43,32 @@ function createGameCard(game) {
 function openModal(gameData) {
     const game = JSON.parse(decodeURIComponent(gameData));
     const modal = document.getElementById("details-modal");
-    const modalBody = document.getElementById("modal-content")
+    const modalBody = document.getElementById("modal-body")
 
     modalBody.innerHTML = /*html*/`
         <div class="modal-header">
-            <img src="images/covers/${game.filename}.jpg" alt="${game.name}">
-            <div>
+            <div 
+                class="modal-cover-wrapper"
+                style="background-image: url('images/covers/${game.filename}.jpg');"
+            >
+                <img 
+                    src="images/covers/${game.filename}.jpg" 
+                    alt="${game.name}"
+                    class="modal-cover">
+            </div>
+
+            <div class="header-info">
                 <h2>${game.name}</h2>
                 <p><strong>Gênero:</strong> ${game.genre} | <strong>Status:</strong> ${game.status}</p>
             </div>
         </div>
+
         <div class="modal-description">
             <h3>Sobre o Jogo</h3>
             <p>${game.description || "Este jogo é uma experiência indie incrível ainda sem descrição detalhada."}</p>
         </div>
+
+        <a href="#" class="link-button">Ver Jogo</a>
     `
     modal.classList.remove("hidden"); 
 }
