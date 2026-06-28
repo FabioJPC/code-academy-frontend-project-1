@@ -27,21 +27,23 @@ async function loadData() {
 }
 
 function createGameCard(game) {
-    const gameData = encodeURIComponent(JSON.stringify(game));
     return /*html*/`
-        <article class="game-card" onclick="openModal('${gameData}')" tabIndex="0" role="button">
+        <article class="game-card" onclick="openModal(${game.id})" tabIndex="0" role="button">
             <div class="game-cover-wrapper">
-                <img src="images/covers/${game.filename}.jpg" alt="Capa do jogo" class="game-cover">
+                <img src="${game.cover}" alt="Capa do jogo" class="game-cover">
             </div>
             <h3>${game.name}</h3>
             <p class="genre">${game.genre}</p>
-            <span class="price">${game.price}</span>
+            <span class="launch-date">${game.launchDate}</span>
         </article>
     `;
 }
 
-function openModal(gameData) {
-    const game = JSON.parse(decodeURIComponent(gameData));
+function openModal(gameID) {
+    const game = gameList.find((g) => g.id === gameID);
+
+    if(!game) return;
+
     const modal = document.getElementById("details-modal");
     const modalBody = document.getElementById("modal-body")
 
@@ -49,10 +51,10 @@ function openModal(gameData) {
         <div class="modal-header">
             <div 
                 class="modal-cover-wrapper"
-                style="background-image: url('images/covers/${game.filename}.jpg');"
+                style="background-image: url('${game.cover}');"
             >
                 <img 
-                    src="images/covers/${game.filename}.jpg" 
+                    src="${game.cover}" 
                     alt="${game.name}"
                     class="modal-cover">
             </div>
@@ -68,7 +70,7 @@ function openModal(gameData) {
             <p>${game.description || "Este jogo é uma experiência indie incrível ainda sem descrição detalhada."}</p>
         </div>
 
-        <a href="#" class="link-button">Ver Jogo</a>
+        <a href="${game.link}" target="_blank" class="link-button">Ver Jogo</a>
     `
     modal.classList.remove("hidden"); 
 }

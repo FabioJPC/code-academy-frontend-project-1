@@ -1,29 +1,35 @@
 [
     { 
         "id": 1,
-        "filename": "witcher-3", 
-        "name": "The Witcher 3", 
-        "genre": "RPG", 
-        "price": "R$ 129,90",
-        "status": "Acesso antecipado"
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3989550/b642d745c07b3d56ff3fe252d6df10db334f4c74/header.jpg?t=1780667118", 
+        "name": "Fallosophy", 
+        "genre": "Plataforma", 
+        "launchDate": "3° trimestre de 2026",
+        "status": "Beta",
+        "link": "https://store.steampowered.com/app/3989550/Fallosophy/",
+        "description": "Fallosophy é um jogo de plataforma em formato de pinball de precisão, difícil e exigente, ambientado em um mundo vertical colossal de ideias. Domine flippers, plungers e o momentum enquanto você sobe pelas eras da filosofia. Você vai cair. Vai se reerguer. E vai aprender a perguntar por quê."
     },
 
     { 
         "id": 2,
-        "filename": "elden-ring", 
-        "name": "Elden Ring", 
-        "genre": "Soulslike", 
-        "price": "R$ 229,00",
-        "status": "Lançado"
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3469420/d72962707329bd157d1e5714f3b8e56bb76ed009/header.jpg?t=1781898284",
+        "name": "Biofactory", 
+        "genre": "Automação",
+        "launchDate": "2026", 
+        "status": "Alpha",
+        "link": "https://store.steampowered.com/app/3469420/Biofactory/?rdt_cid=5902323075252513941",
+        "description": "Construa, cultive e posicione gigantescos órgãos de bioengenharia para automatizar a produção. Use esteiras de intestinos pulsantes para transportar materiais. Aqui, a indústria não prospera com o aço, mas com a carne."
     },
 
     { 
         "id": 3,
-        "filename": "cyberpunk-2077", 
-        "name": "Cyberpunk 2077", 
-        "genre": "Ficção Científica", 
-        "price": "R$ 199,00",
-        "status": "Protótipo"
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3647510/9dc57f85e4a44cd752058560f1fa82e439f9ce28/header.jpg?t=1782437416",
+        "name": "Carry the egg", 
+        "genre": "Ação", 
+        "launchDate": "Julho de 2026",
+        "status": "Acesso antecipado",
+        "link": "https://store.steampowered.com/app/3647510/Carry_The_Egg/",
+        "description": "Carry The Egg é um jogo de plataforma cooperativo para 2 jogadores em que um controla o Ovo e o outro um robô desajeitado responsável por carregá-lo e protegê-lo. Trabalhem juntos para superar desafios de física, puzzles e parkour. Sua amizade sobreviverá a essa jornada?"
     },
 
     { 
