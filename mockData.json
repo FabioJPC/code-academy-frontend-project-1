@@ -32,48 +32,156 @@
         "description": "Carry The Egg é um jogo de plataforma cooperativo para 2 jogadores em que um controla o Ovo e o outro um robô desajeitado responsável por carregá-lo e protegê-lo. Trabalhem juntos para superar desafios de física, puzzles e parkour. Sua amizade sobreviverá a essa jornada?"
     },
 
-    { 
+    {
         "id": 4,
-        "filename": "hollow-knight", 
-        "name": "Hollow Knight", 
-        "genre": "Metroidvania", 
-        "price": "R$ 27,99",
-        "status": "Beta"
-    },
-    
-    { 
-        "id": 1,
-        "filename": "witcher-3", 
-        "name": "The Witcher 3", 
-        "genre": "RPG", 
-        "price": "R$ 129,90",
-        "status": "Acesso antecipado"
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3876710/352c6fc15425028af5e585f441bb6b3a84d18b3f/header.jpg?t=1781542555",
+        "name": "Pigeon: A Love Story",
+        "genre": "Exploração",
+        "launchDate": "2026",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/3876710/Pigeon_A_Love_Story/",
+        "description": "Pigeon: A Love Story é um jogo em que você plana sobre réplicas em escala real de cidades icônicas em busca da sua alma gêmea em forma de pombo. Um jogo lento para tempos acelerados."
     },
 
-    { 
-        "id": 2,
-        "filename": "elden-ring", 
-        "name": "Elden Ring", 
-        "genre": "Soulslike", 
-        "price": "R$ 229,00",
-        "status": "Lançado"
+    {
+        "id": 5,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3299450/a5473045fdf980d6c03c3aea5224a4f3968d7607/header.jpg?t=1779956492",
+        "name": "Calame",
+        "genre": "RPG",
+        "launchDate": "2026",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/3299450/Calame/",
+        "description": "m Westalia, uma lenda é mais que uma história: é uma arma de destruição em massa. Quando a crença em uma lenda se torna forte o bastante, esse poder pode remodelar o campo de batalha — ou consumir aqueles que o empunham. Para derrubar o tirânico Rei da Luz, a Rebelião deve aprender a dominar essa força divina... ...Sem se tornar o próprio monstro que combate. De um lado, Kenmare luta pela liberdade do povo. Do outro, as Panteras lutam para retomar o trono. Sua aliança é uma questão de sobrevivência; suas visões de futuro são absolutamente irreconciliáveis. E é você quem as lidera."
     },
 
-    { 
-        "id": 3,
-        "filename": "cyberpunk-2077", 
-        "name": "Cyberpunk 2077", 
-        "genre": "Ficção Científica", 
-        "price": "R$ 199,00",
-        "status": "Protótipo"
+    {
+        "id": 6,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3861710/b4f3578c807168b204d4c5d937118644bfedb38e/header.jpg?t=1780766228",
+        "name": "Otterly Lost",
+        "genre": "Aventura",
+        "launchDate": "setembro de 2026",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/3861710/Otterly_Lost/",
+        "description": "A curious sea otter named Otto was swept away from home after a mysterious event. Far from familiar waters, you must find your way back. Meet friendly animals and explore a world full of places to discover."
     },
 
-    { 
-        "id": 4,
-        "filename": "hollow-knight", 
-        "name": "Hollow Knight", 
-        "genre": "Metroidvania", 
-        "price": "R$ 27,99",
-        "status": "Beta"
+    {
+        "id": 7,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4198610/593bfc524195d934ab201caad07ae46295d24e48/header.jpg?t=1781624066",
+        "name": "A Fighter's Nova: Mindara",
+        "genre": "RPG",
+        "launchDate": "Não definido",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/4198610/A_Fighters_Nova_Mindara/",
+        "description": "A Fighter's Nova: Mindara é um JRPG narrativo que combina uma história focada em personagens com a intensidade e precisão de um verdadeiro jogo de luta tag team."
+    },
+
+    {
+        "id": 8,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1445880/a8bc64146ec88f438e26ff629bb95271ca4319a9/header.jpg?t=1777450250",
+        "name": "ROCKBEASTS",
+        "genre": "RPG",
+        "launchDate": "Não definido",
+        "status": "Beta",
+        "link": "https://store.steampowered.com/app/1445880/ROCKBEASTS/",
+        "description": "Um RPG de gestão em que você guia uma banda grunge da obscuridade da garagem para a glória do palco. Prepare shows, gerencie egos e lide com as complexidades da indústria em uma América alternativa habitada por personagens antropomórficos fantásticos. Alcance o sucesso sem se vender."
+    },
+
+    {
+        "id": 9,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4335460/604da940e85a84b3d980ab6f783db7a1b63c6f61/header.jpg?t=1781620142",
+        "name": "BOXROOM",
+        "genre": "Simulação",
+        "launchDate": "Junho 2026",
+        "status": "Acesso antecipado",
+        "link": "https://store.steampowered.com/app/4335460/BOXROOM/",
+        "description": "BOXROOM permite que você crie, projete e decore um local - um santuário - para a sua biblioteca Steam, e então aprecie a organização da sua coleção de jogos."
+    },
+
+    {
+        "id": 10,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2553040/header.jpg?t=1780564967",
+        "name": "Nested Lands",
+        "genre": "Sobrevivência",
+        "launchDate": "Fevereiro 2026",
+        "status": "Acesso antecipado",
+        "link": "https://store.steampowered.com/app/2553040/Nested_Lands/",
+        "description": "Nested Lands é um RPG medieval implacável, com construção minuciosa de vilas, gerenciamento social em grande escala e combates. Reúna sobreviventes, construa um assentamento, produza itens, aprenda habilidades, sobreviva e persevere, solo ou em cooperação online."
+    },
+
+    {
+        "id": 11,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2979810/eaf8ca255707001ae657de0cb62143e145b07a17/header.jpg?t=1782340705",
+        "name": "Polyaris",
+        "genre": "Sobrevivência",
+        "launchDate": "2026",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/2979810/POLYARIS/",
+        "description": "Sobreviva no Ártico neste jogo single-player em primeira pessoa. Mova-se de esquis e barco, mantenha-se quente, seco e hidratado, saqueie o que foi deixado para trás, lute contra inimigos e escape do norte solitário por qualquer meio."
+    },
+
+    {
+        "id": 12,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2853290/header.jpg?t=1778672649",
+        "name": "Free Stars: Children of Infinity",
+        "genre": "Ficção Científica",
+        "launchDate": "2026",
+        "status": "Pré-lançamento",
+        "link": "https://store.steampowered.com/app/2853290/Free_Stars_Children_of_Infinity/",
+        "description": "Experience a stellar space adventure and the sequel to The Ur-Quan Masters. Travel through hyperspace, engage in fast-paced combat, discover weird worlds, and meet a unique cast of truly alien aliens as you uncover a mystery that threatens the galaxy."
+    },
+    {
+        "id": 13,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2242130/header.jpg?t=1672854745",
+        "name": "Summer Village",
+        "genre": "Aventura",
+        "launchDate": "2023",
+        "status": "Lançado",
+        "link": "https://store.steampowered.com/app/2242130/Summer_Village/",
+        "description": "Um jogo de plataforma em um charmoso cenário na era medieval. Controle um herói que pula para superar obstáculos. Evolua seu herói buscando por armaduras, escudos e espadas que o tornam mais forte. Como desafio extra, tente encontrar os artefactos escondidos pelo mundo."
+    },
+
+    {
+        "id": 14,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2761900/header.jpg?t=1741201989",
+        "name": "Skull Skull Skull",
+        "genre": "Ação",
+        "launchDate": "Março 2025",
+        "status": "Lançado",
+        "link": "https://store.steampowered.com/app/2761900/Skull_Skull_Skull/",
+        "description": "Skull Skull Skull é um atirador de arena de cima para baixo roguelite onde você luta contra hordas de caveiras. Personalize sua arma e escolha melhorias para sobreviver o maior tempo possível."
+    },
+
+    {
+        "id": 15,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg?t=1782370060",
+        "name": "Iron Nest",
+        "genre": "Ação",
+        "launchDate": "Agosto 2026",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/2950790/IRON_NEST_Simulador_de_Artilharia_Pesada/",
+        "description": "IRON NEST é um jogo brutal de artilharia pesada dieselpunk onde você domina o campo de batalha com uma máquina de guerra colossal. Use medições do mapa com coordenadas recebidas, configure os sistemas hidráulicos e atire os canhões para destruir inimigos ⟹ Você irá obedecer o Alto Comando, Operador?"
+    },
+
+    {
+        "id": 16,
+        "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3308200/header.jpg?t=1782404875",
+        "name": "Tombwater",
+        "genre": "RPG",
+        "launchDate": "março 2026",
+        "status": "Demo",
+        "link": "https://store.steampowered.com/app/3308200/Tombwater/",
+        "description": "A Souls-Like Western full of Eldritch horrors. Explore the accursed Wild West town of Tombwater and lay bare the darkness that lies beneath. Survive blood-spilling combat in this gruesome 2D action-RPG that may just drive you to madness."
+    },
+
+    {
+        "id": 17,
+        "cover": "",
+        "name": "",
+        "genre": "",
+        "launchDate": "",
+        "status": "",
+        "link": "",
+        "description": ""
     }
 ]
