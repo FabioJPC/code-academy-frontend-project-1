@@ -349,6 +349,21 @@ aside::-webkit-scrollbar-thumb {
 
 .modal-description p {
   font-size: 1.0em;
+  height: 4rem;
+  padding-right: 5px;
+  overflow-y: auto;
+}
+.modal-description p::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-description p::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+.modal-description p::-webkit-scrollbar-thumb {
+  background: var(--neon-green-dim);
+  border-radius: 4px;
 }
 
 .modal-cover-wrapper {
