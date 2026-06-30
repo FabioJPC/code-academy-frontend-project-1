@@ -19,12 +19,6 @@ html {
   color: var(--text-primary);
 }
 
-.black-ops-one-regular {
-  font-family: "Black Ops One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* HEADER */
 
 .logo-container {
@@ -52,6 +46,19 @@ header {
   flex-direction: row;
   min-height: 10vh;
   flex-shrink: 0;
+}
+
+.page-title {
+  all: unset;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.page-title {
+  font-size: inherit;
 }
 
 .search-container {
@@ -142,6 +149,20 @@ aside {
   min-width: 10%;
   flex-shrink: 0;
   padding: 20px;
+  overflow-y: auto;
+}
+
+aside::-webkit-scrollbar {
+  width: 5px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: var(--neon-green-dim);
+  border-radius: 4px;
 }
 
 .categories-nav {
@@ -327,7 +348,7 @@ aside {
 }
 
 .modal-description p {
-  font-size: 0.9em;
+  font-size: 1.0em;
 }
 
 .modal-cover-wrapper {
@@ -372,7 +393,7 @@ aside {
   right: 10px;
   bottom: 10px;
   text-decoration: none;
-  color: var(--text-primary);
+  color: var(--neon-green-dim);
 }
 
 #close-button {

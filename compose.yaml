@@ -1,6 +1,6 @@
 services:
   games-catalog:
     build: .
-    image: games-catalog
+    image: game-catalog
     ports: 
       - "8080:80"

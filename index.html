@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>IndieCore</title>
@@ -16,7 +15,9 @@
     <header>
         <div class="logo-container">
             <img src="images/logo/logo-no-bg.png" alt="Logo do site" class="logo">
-            <p class="black-ops-one-regular">IndieCore</p>
+            <a href="" class="page-title">
+                <h1>IndieCore</h1>
+            </a>
         </div>
 
         <div class="search-container">
@@ -28,7 +29,7 @@
 
         <div class="profile">
             <button class="avatar">
-                <i class="bi bi-person-circle avatar"></i>
+                <i class="bi bi-person-circle"></i>
                 <span>Nome</span>
             </button>
         </div>
@@ -59,7 +60,11 @@
 
         <div class="details-modal hidden" id="details-modal">
             <div class="modal-content">
-                <button id="close-button" onclick="closeModal()">&times;</button>
+                <button 
+                    id="close-button" 
+                    aria-label="Fechar modal"
+                    onclick="closeModal()">&times;
+                </button>
                 <div id="modal-body" class="modal-body">
                     <!--dynamic insertion-->
                 </div>
